@@ -1,15 +1,13 @@
 public abstract class Automotivo {
-    
 
-    //variavies
+    // Variáveis comuns a todos os veículos
     private String modelo;
     private int anoDeFabricacao;
     private String montadora;
     private String cor;
     private double kilometragem;
 
-
-    //Construtor
+    // Construtor que inicializa as variáveis
     public Automotivo(String modelo, int anoDeFabricacao, String montadora, String cor, double kilometragem) {
         this.modelo = modelo;
         this.anoDeFabricacao = anoDeFabricacao;
@@ -18,8 +16,7 @@ public abstract class Automotivo {
         this.kilometragem = kilometragem;
     }
 
-
-    //getters e Setters
+    // Métodos getters e setters para as variáveis
     public String getModelo() {
         return modelo;
     }
@@ -60,7 +57,7 @@ public abstract class Automotivo {
         this.kilometragem = kilometragem;
     }
 
-    //Comando INSERT para o banco de dados
+    /* Método abstrato para gerar o comando de inserção no banco de dados
+     Cada classe que herdar de Automotivo deve implementar este método*/
     public abstract String gerarComandoInsert();
-
 }
